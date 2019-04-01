@@ -23,6 +23,7 @@ import {
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ConsumirService } from './consumir.service';
 
 @NgModule({
   imports: [
@@ -33,16 +34,14 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    })
+  
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
 
   ],
-  providers: [],
+  providers: [ConsumirService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

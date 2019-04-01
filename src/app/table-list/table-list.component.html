@@ -1,24 +1,86 @@
-<div class="container table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Destino</th>
-        <th scope="col">Fecha</th>
-        <th scope="col">Status</th>
-        <th scope="col">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let p of products; let i = index">
-        <th>{{ i + 1 }}</th>
-        <td>{{ p.codigo}} {{ p.last_name }}</td>
-        <td>{{ p.place_flight }}</td>
-        <td>{{ p.date_flight }}</td>
-        <td>{{ p.status_flight }}</td>
-        <td><a class="btn btn-outline-info">Editar</a></td>
-      </tr>
-    </tbody>
-  </table>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Tipo de Movilidad </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table" *ngFor="let p of  products">
+                                <thead class=" text-primary">
+                                    <th>
+                                    Foto
+                                    </th>
+                                    <th>
+                                        Id
+                                    </th>
+                                    <th>
+                                        Codigo
+                                    </th>
+                                    <th>
+                                        Cedula
+                                    </th>
+                                    <th>
+                                        Nombres
+                                    </th>
+                                    <th>
+                                        Apellidos
+                                    </th>
+                                    <th>
+                                        Sexo
+                                    </th>
+                                    <th>
+                                        Fecha de Nacimiento
+                                    </th>
+                                    <th>
+                                        Imagen
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                       <td>
+                                         
+                                         <img src="{{p.img}}">
+
+                                         </td>
+                                        <td>
+                                           {{p.id}}
+                                        </td>
+                                        <td>
+                                           {{p.codigo}}
+                                        </td>
+                                        <td>
+                                            {{p.cedula}}
+                                            
+                                        </td>
+                                        <td>
+                                            {{p.nombres}} 
+                                        </td>
+                                        <td>
+                                            {{p.apellidos}}
+
+                                        </td>
+                                        <td>
+                                            {{p.sexo}}
+                                        </td>
+                                        <td>
+                                            {{p.fechaNacimiento}}
+                                        </td>
+                                        <td>
+                                            {{p.codigo}}
+                                        </td>
+                                        
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
